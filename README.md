@@ -1,5 +1,7 @@
 ## Autor: Natanael Pérez Veas - 2026
 Proyecto base para desarrollo educativo y demostraciones prácticas con Node.js y Express.
+	- Drive: https://drive.google.com/drive/folders/1lGqvrUBW5FkHk1dxDfoK6VnQ6l9gPoQc?usp=sharing
+	- Proyecto Github: https://github.com/nathanpeve/ExamenModulo6
 
 # PARTE 1 Instrucciones de Instalación: #
 
@@ -40,7 +42,7 @@ Proyecto base para desarrollo educativo y demostraciones prácticas con Node.js 
 
 # PARTE 2 Estructura y Objetivos de Proyecto # 
 
-# App-01 — Node Express WebApp
+## App-01 — Node Express WebApp
 	- Aplicación web base construida con **Node.js + Express**, diseñada como punto de partida para un sistema de gestión de cartera de inversiones.
 
 El proyecto expone:
@@ -181,14 +183,14 @@ El proyecto expone:
 		- definir en README si se decide una estructura distinta (por ejemplo, incluir /utils, /services, etc.): Implementada estructura de carpetas de Readme
 
 
-## Entrega ##
+## 6.- Entrega ##
 
- 1.  Repositorio en GitHub 
+1.  Repositorio en GitHub 
 	- Estructura clara del proyecto (carpetas, archivos fuente y README.md). 
 	- Commit inicial y commits parciales que den cuenta del desarrollo. 
 	- Scripts de ejecución funcionales: npm run dev, npm start
 
-2 .  Carpeta en Google Drive compartida 
+2.  Carpeta en Google Drive compartida 
 	- Nombre sugerido:   TP Integrador JS - [Tu Nombre y Apellido]: Listo
 	- Subcarpeta para la Parte 1: Parte 1 – Módulo 6 o Contenidosmínimos:   
 		- Capturas de pantalla del servidor en funcionamiento: Listo

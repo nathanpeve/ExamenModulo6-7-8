@@ -76,7 +76,7 @@ const PORT = process.env.PORT || 3000;
 log("Servidor iniciando, Puerto a funcionar: " + PORT);
 
 
-/*Levanta el servidor y comienza a escuchar peticiones.*/
+/*Levanta server y comienza a escuchar peticiones.*/
 app.listen(PORT, () => {
   console.log('Servidor funcionando: Puerto ' + PORT);
 });

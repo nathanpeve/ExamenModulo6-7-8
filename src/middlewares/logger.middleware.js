@@ -1,6 +1,6 @@
 const log = require('../utils/fileLogger');
 
-// Definimos la función con nombre
+//def - funcion nombre
 function loggerMiddleware(req, res, next) {
 
     if (
@@ -14,5 +14,5 @@ function loggerMiddleware(req, res, next) {
     next(); // Continuar siguiente middleware
 }
 
-// Exportamos la función
+// Exportar funcion
 module.exports = loggerMiddleware;

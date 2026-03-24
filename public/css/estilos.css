@@ -1,0 +1,28 @@
+/* !important para forzar color */
+body {
+    background-color: #c4dee2 !important;
+}
+
+h3 {
+    background-color: rgb(73, 158, 255) !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;      /* Espacio interno para que no quede pegado al borde */
+    border-radius: 15px !important;     /* bordes redondeados */
+    margin-bottom: 20px !important;     
+}
+
+/* Menu Lateral */
+.bg-light {
+    background-color: #eaf9ff!important;
+}
+
+/* Container Derecha */
+.col-md-10 {
+    background-color: #c4dee2 !important;
+}
+
+.table {
+    border-spacing: 0 !important; /* sin spacing */
+    border-radius: 15px !important; /* bordes redondeados */
+    overflow: hidden !important; /* Cortar overflow */
+}

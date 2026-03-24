@@ -1,12 +1,9 @@
-/*
-
-Capas/Layer:
+/*Capas/Layer:
 index.js = punto de entrada
 routes   = definen URLs
 controllers = lógica HTTP
 services = logica de negocio
-modelo = acceso a sql
-*/
+modelo = acceso a sql*/
 
 const express = require('express');
 const cors = require('cors');

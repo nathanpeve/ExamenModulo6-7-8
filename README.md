@@ -28,6 +28,7 @@ Proyecto base para desarrollo educativo y demostraciones prácticas con Node.js 
 
 
 ## Cómo ejecutar  proyecto:
+	- IMPORTANTE: Para que el sistema funcione necesita un archivo .env en la raíz con PORT=, DATABASE_URL= y PORTAFOLIO_JWT_SECRET=
 	- abrir cmd en raíz
 	- Comando: 	 npm run dev 	= Ejecutar en modo desarrollo
 	- Comando:	 npm run start  = Ejecutar en modo producción
@@ -73,96 +74,106 @@ El proyecto expone:
 	- Nodemon (desarrollo)
 
 ##  Estructura del proyecto
-ExamenModulo6-7-8/
-	│   .env
-	│   .gitignore
-	│   .prettierrc
-	│   index.js
-	│   package-lock.json
-	│   package.json
-	│   README.md
-	├───logs
-	├───precios-mercado
-	│       precios-18marzo.txt
-	├───public
-	│   │   compra-v1.html
-	│   │   compra.html
-	│   │   default.html
-	│   │   emisor.html
-	│   │   index.html
-	│   │   instrumento.html
-	│   │   operaciones.html
-	│   │   precios.html
-	│   │   principal.html
-	│   │
-	│   ├───css
-	│   ├───img
-	│   │       BlackRock-logo.jpg
-	│   │
-	│   └───js
-	│           default.js
-	│           emisor.js
-	│           instrumento.js
-	│           login.js
-	│           menu.js
-	│           principal.js
-	├───src
-	│   ├───config
-	│   │       database.js
-	│   │       sequelize.js
-	│   │
-	│   ├───controllers
-	│   │       authController.js
-	│   │       emisorController.js
-	│   │       fondoController.js
-	│   │       instrumentoController.js
-	│   │       menuController.js
-	│   │       nemotecnicoController.js
-	│   │       operacionController.js
-	│   │       precioController.js
-	│   │
-	│   ├───middlewares
-	│   │       authMiddleware.js
-	│   │       logger.middleware.js
-	│   │       upload.js
-	│   │
-	│   ├───models
-	│   │       emisorModel.js
-	│   │       fondoModel.js
-	│   │       instrumento.js
-	│   │       instrumentoModel-sql.js
-	│   │       instrumentoModel.js
-	│   │       nemotecnicoModel.js
-	│   │       operacionModel.js
-	│   │       precioModel.js
-	│   │
-	│   ├───routes
-	│   │       .prettierrc
-	│   │       authRoutes.js
-	│   │       emisorRoutes.js
-	│   │       fondoRoutes.js
-	│   │       instrumentoRoutes.js
-	│   │       menuRoutes.js
-	│   │       nemotecnicoRoutes.js
-	│   │       operacionRoutes.js
-	│   │       precioRoutes.js
-	│   │
-	│   ├───services
-	│   │       authService.js
-	│   │       emisorService.js
-	│   │       instrumentoService.js
-	│   │       menuService.js
-	│   │
-	│   ├───sql
-	│   │       create-tables-sistema.sql
-	│   │       insert-tables-sistema.sql
-	│   │       update-menu.sql
-	│   │
-	│   └───utils
-	│           fileLogger.js
-	│
-	└───uploads
-			1773881753740.txt
+ExamenModulo6-7-8/  
+│   .env  
+│   .gitignore  
+│   .prettierrc  
+│   index.js  
+│   package-lock.json  
+│   package.json  
+│   README.md  
+│  
+├───logs  
+│  
+├───node_modules  
+│  
+├───precios-mercado  
+│       precios-18marzo.txt  
+│       precios-19marzo.txt  
+│  
+├───public  
+│   │   compra-v1.html  
+│   │   compra.html  
+│   │   default.html  
+│   │   emisor.html  
+│   │   index.html  
+│   │   instrumento.html  
+│   │   operaciones.html  
+│   │   precios.html  
+│   │   principal.html  
+│   │  
+│   ├───img  
+│   │       portafolio-logo.jpg  
+│   │  
+│   └───js  
+│           compra.js  
+│           default.js  
+│           emisor.js  
+│           instrumento.js  
+│           login.js  
+│           menu.js  
+│           operaciones.js  
+│           precios.js  
+│           principal.js  
+│  
+├───src  
+│   ├───config  
+│   │       database.js  
+│   │       sequelize.js  
+│   │  
+│   ├───controllers  
+│   │       authController.js  
+│   │       emisorController.js  
+│   │       fondoController.js  
+│   │       instrumentoController.js  
+│   │       menuController.js  
+│   │       nemotecnicoController.js  
+│   │       operacionController.js  
+│   │       precioController.js  
+│   │  
+│   ├───middlewares  
+│   │       authMiddleware.js  
+│   │       logger.middleware.js  
+│   │       upload.js  
+│   │  
+│   ├───models  
+│   │       emisorModel.js  
+│   │       fondoModel.js  
+│   │       instrumento.js  
+│   │       instrumentoModel-sql.js  
+│   │       instrumentoModel.js  
+│   │       nemotecnicoModel.js  
+│   │       operacionModel.js  
+│   │       precioModel.js  
+│   │  
+│   ├───routes  
+│   │       .prettierrc  
+│   │       authRoutes.js  
+│   │       emisorRoutes.js  
+│   │       fondoRoutes.js  
+│   │       instrumentoRoutes.js  
+│   │       menuRoutes.js  
+│   │       nemotecnicoRoutes.js  
+│   │       operacionRoutes.js  
+│   │       precioRoutes.js  
+│   │  
+│   ├───services  
+│   │       authService.js  
+│   │       emisorService.js  
+│   │       instrumentoService.js  
+│   │       menuService.js  
+│   │  
+│   ├───sql  
+│   │       create-tables-sistema.sql  
+│   │       insert-tables-sistema.sql  
+│   │       update-menu.sql  
+│   │  
+│   └───utils  
+│           fileLogger.js  
+│           response.js  
+│  
+└───uploads  
+        1773881753740.txt  
 
 ## Convenciones del proyecto
 
@@ -181,67 +192,101 @@ ExamenModulo6-7-8/
 
 ## 1.- Conexión a una base de datos: ##
 	- Configurar una conexión estable y segura entre el servidor Node y una base de datos relacional (MySQL)
-	- Crear la base de datos y al menos 1 tabla principal . 
+			✔ Se implementò PostgreSQL Neon
+	- Crear la base de datos y al menos 1 tabla principal.
+			✔ se crearon más de 12 tablas, como usuario, emisor etc. (en archivos auth.js se pueden ejemplificar)
 	- Utilizar mysql2, pg o el paquete ORM elegido para establecer la conexión. 
+			✔ se ocupa pg
 	- Almacenar credenciales en variables de entorno. 
+			✔ index.js linea 23
 	- Archivo .env con las claves ocultas. 
+			✔ 
 	- Log en consola al conectar con éxito. 
-	- Justificación esperada: 
+			✔ ejemplo en index.js linea 46-47
+	- Justificación esperada:
 		- ¿Por qué elegiste ese cliente de conexión? 
 		- ¿Cómo se protegen los datos sensibles? 
+			✔ se eligió pg por manejo asincronico y sencillez de uso, se protegen los datos sensibles para evitar robos
 
 ## 2.- Obtención de información desde una base de datos ##
 	- Consultar información almacenada y presentarla desde rutas del backend. 
-	- Crear una ruta GET /usuarios que devuelva los datos de la tabla. 
+			✔ routes.js
+	- Crear una ruta GET /usuarios que devuelva los datos de la tabla.
+			✔ index.js, linea 31 en adelante
 	- Procesar los resultados antes de enviarlos (evitar contraseñas o datos sensibles). 
+			✔ login gracias a authServide.js
 	- Validar errores de conexión o consulta. 
+			✔ gracias a funciones error, como en response.js
 	- Al menos 3 registros simulados . 
+			✔ tablas con contenido en Neon
 	- Respuesta en JSON clara y ordenada. 
+			✔ gracias a response.js
 	- Implementar paginación o filtrado por query params (?nombre=Juan). 
+			✔ operacionRoutes.js
 
 ## 3.- Modificación de datos en una base de datos ##
 	- Incorporar operaciones de actualización y eliminación controladas sobre los datos existentes. 
+			✔ incorporado en tablas emisor, emisorService.js como ejemplo
 	- Ruta  PUT /usuarios/:id  para modificar un registro. 
+			✔ emisorService.js 
  	- Ruta  DELETE /usuarios/:id con validación previa de existencia. 
+			✔ emisorService.js
 	- Validar errores y devolver mensajes útiles. 
+			✔ response.js, index.js pantalla login cuando contraseña en incorrecta
 	- Confirmación de éxito en ambas operaciones. 
+			✔ function success de response.js
 	- Validación de ID existente. 
 		- ¿Por qué decidiste actualizar sólo ciertos campos? 
 		- ¿Qué validaciones aplicaste para evitar errores? 
+			✔ para mantener integridad, se validan todos los procesos por medio de funciones asincrònicas y de esta forma en caso de no encontrarse algun archivo o ruta se puede devolver errores
 
 ## 4.- Transaccionalidad ##
 	- Proteger operaciones sensibles asegurando consistencia de datos. 
+			✔ al igual que datos de usuario
 	- Implementar una operación simulada que involucre al menos 2 acciones consecutivas (por ejemplo, registrar un usuario y crear su historial). 
+			✔ operacionController.js tiene el método crearCompra con operacion que involucra 2 acciones consecutivas (registro de compra)
 	- Asegurar rollback si alguna falla. 
+			✔ operacionController.js Begin, commit y Rollback 
 	- Log de éxito o error claro. 
+			✔  fileLogger.js linea 7 
 	- Evidencia de rollback si se fuerza un error. 
+			✔ fileLogger.js linea 7
 	- Tarea PLUS (opcional): 
 		- Log en archivo de las transacciones fallidas (similar al log.txt previo). 
+			✔  fileLogger.js registra con fecha en un archivo txt
 
 ## 5. Acceso a datos con ORM ## 
 	- Reemplazar o complementar las consultas SQL con un ORM (como Sequelize). 
+			✔ emisorService.js
 	- Instalar e inicializar ORM. 
-	- Definir al menos 1 modelo (  User  ). 
+			✔ SI
+	- Definir al menos 1 modelo (User). 
+			✔ modelos de Emisor e Instrumento
 	- Crear una ruta que devuelva los usuarios usando métodos del ORM. 
+			✔ Si, emisorServise.js linea 5
 	- Requerimientos mínimos: 
-	- Comparación de resultados entre SQL manual y ORM. 
-	- Justificación esperada: 
-	- ¿Qué ventaja encontraste usando ORM frente al cliente SQL tradicional? 
+			- Comparación de resultados entre SQL manual y ORM. ✔ 
+			- Justificación esperada: 
+			- ¿Qué ventaja encontraste usando ORM frente al cliente SQL tradicional? 
+				ORM siento que permite optimizar codigo SQL
 
 ## 6.- Manejo de relaciones en un ORM: ##
 	- Crear relaciones entre modelos y consultarlas desde rutas. 
+			✔ SI
 	- Crear al menos 1 relación (por ejemplo, Usuario tiene muchos Pedidos). 
+			✔ Relaciones Fondo-Operaciones / Emisor-Instrumentos etc.
 	- Crear una ruta que devuelva el usuario y sus pedidos en una sola consulta. 
+			✔ SI, método buscar en operacionController.js por ejemplo
 	- Uso de include o equivalente para traer relaciones. 
+			✔ SI
 	- Al menos 2 modelos relacionados. 
-	- Tarea PLUS (opcional) : 
-		- Mostrar los datos anidados en una tabla en HTML o como JSON ordenado. 
+			✔ tabla de emisores, precios, operaciones etc.
 
 ## 7.- Entregables: ##
 	- Repositorio actualizado en GitHub 
-		- Nuevos modelos y rutas. 
-		- Carpeta models/, services/ o equivalente con acceso a datos. 
-		- Código versionado y documentado. 
+		- Nuevos modelos y rutas. ✔
+		- Carpeta models/, services/ o equivalente con acceso a datos. ✔
+		- Código versionado y documentado. ✔
 	- Subcarpeta nueva en Google Drive 
 		- Carpeta: Parte 2 – Módulo 7 
 		- Capturas de las operaciones de lectura, escritura y eliminación desde Postman o similar.

@@ -1,3 +1,32 @@
+//funcion para formatear fecha:
+function formatearFechaChile(fechaISO) {
+    if (!fechaISO) return "N/A";
+
+    // Divisiión de String
+    const [fechaParte, horaParte] = fechaISO.split('T'); 
+    const [anio, mes, dia] = fechaParte.split('-');
+    const horaSimp = horaParte.substring(0, 5); // "HH:MM"
+
+    // Retorna Formato: DD/MM/AA - HH:MM
+    return `${dia}/${mes}/${anio.slice(-2)} - ${horaSimp}`;
+}
+
+// Formato para Moneda (Monto y Precio):
+const formatearMoneda = (v) => {
+    return new Intl.NumberFormat('es-CL', {
+        style: 'currency',
+        currency: 'CLP',
+        maximumFractionDigits: 0
+    }).format(v);
+};
+
+// Formato para Cantidad sin decimales
+const formatearCantidad = (v) => {
+    return new Intl.NumberFormat('es-CL', {
+        maximumFractionDigits: 0
+    }).format(v);
+};
+
 async function cargarFondos() {
   const res = await fetch('/api/fondos');
   const data = await res.json();
@@ -55,11 +84,11 @@ async function buscar() {
                     <td>${o.id_operacion}</td>
                     <td>${o.fondo_nombre}</td>
                     <td>${o.tipo}</td>
-                    <td>${o.fecha}</td>
-                    <td>${o.monto}</td>
+                    <td>${formatearFechaChile(o.fecha)}</td>
+                    <td class="text-end">${formatearMoneda(o.monto)}</td>
                     <td>${o.id_nemotecnico || ''}</td>
-                    <td>${o.cantidad || ''}</td>
-                    <td>${o.precio || ''}</td>
+                    <td class="text-end">${formatearCantidad(o.cantidad)}</td>
+                    <td class="text-end">${formatearMoneda(o.precio)}</td>
                 </tr>
                 `;
   });

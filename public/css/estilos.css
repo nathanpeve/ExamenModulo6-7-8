@@ -97,8 +97,8 @@ background-color: #6eb4c0 !important;
     transition: all 0.2s ease;
 }
     /* Efecto Hover para el botón */
-    .btn-custom:hover {
-        background-color: rgb(24, 52, 85); 
+    .btn-custom:hover,.btn-custom:active, .btn-custom:focus {
+        background-color: rgb(24, 52, 85) !important; 
     }
 
 /* Boton Custom 2 */
@@ -110,12 +110,12 @@ background-color: #6eb4c0 !important;
     transition: all 0.2s ease;
 }
     /* Efecto Hover para el botón */
-    .btn-custom2:hover {
-        background-color: rgb(199, 218, 33); 
+    .btn-custom2:hover, .btn-custom2:active, .btn-custom2:focus {
+        background-color: rgb(199, 218, 33) !important; 
     }
 
 /* Boton Custom 3*/
-.btn-custom3 {
+.btn-custom3{
     background-color: rgb(199, 41, 41);
     padding: 7px 13px;
     color: rgb(255, 255, 255);
@@ -123,8 +123,8 @@ background-color: #6eb4c0 !important;
     transition: all 0.2s ease;
 }
     /* Efecto Hover para el botón */
-    .btn-custom3:hover {
-        background-color: rgb(167, 34, 34); 
+    .btn-custom3:hover, .btn-custom3:active, .btn-custom3:focus {
+        background-color: rgb(167, 34, 34) !important; 
         color: rgb(255, 255, 255);
     }
 
@@ -137,7 +137,7 @@ background-color: #6eb4c0 !important;
     transition: all 0.2s ease;
 }
     /* Efecto Hover para el botón */
-    .btn-custom4:hover {
-        background-color: rgb(1, 190, 42);
+    .btn-custom4:hover, .btn-custom4:active, .btn-custom4:focus{
+        background-color: rgb(1, 190, 42) !important;
         color: rgb(255, 255, 255);
     }

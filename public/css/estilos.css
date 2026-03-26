@@ -1,6 +1,28 @@
+/* Estilo para la tarjeta de Login */
+    .card.shadow {
+        background-color: #6eb4c0 !important;
+        border: 5px solid rgb(43, 93, 151); /* Borde */
+        border-radius: 15px;  
+    }
+    /* Títulos Login */
+    .card-body h2{
+        color:  rgb(255, 255, 255) !important;
+        font-weight: bold;
+    }
+    .card-body h5{
+        color: rgb(255, 255, 255) !important;
+    }
+
+    .img-logo-login {
+    width: 350px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    }
+
 /* !important para forzar color */
 body {
-    background-color: #8fd3dd !important;
+background-color: #6eb4c0 !important;
+font-family:Tahoma !important;
 }
 
 /* Navbar Superior
